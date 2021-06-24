@@ -37,7 +37,25 @@ namespace DataAccessLayer
 
             dr.Close();
             return degerler; 
-
         }
+
+        public static int PersonelEkle(EntityPersonel p) //p sınıflara ulasmamızı saglar
+        {
+            SqlCommand komut2 = new SqlCommand("insert into Tbl_Personel(PerAd,PerSoyad,PerSehir,PerMaas,PerMeslek) VALUES(@PerAd,@PerSoyad,@PerSehir,@PerMaas,@PerMeslek) ", Baglanti.bgl);
+            komut2.Parameters.AddWithValue("@PerAd",p.Ad);
+            komut2.Parameters.AddWithValue("@PerSoyad", p.Soyad);
+            komut2.Parameters.AddWithValue("@PerSehir", p.Sehir);
+            komut2.Parameters.AddWithValue("@PerMaas", p.Maas);
+            komut2.Parameters.AddWithValue("@PerMeslek", p.Gorev);
+
+            if (komut2.Connection.State != ConnectionState.Open) 
+            {
+                komut2.Connection.Open();
+            }
+            return komut2.ExecuteNonQuery(); //kayıt sayısını döndürdük
+        }
+
+
+
     }
 }
