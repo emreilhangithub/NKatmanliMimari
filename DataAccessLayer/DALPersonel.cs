@@ -9,7 +9,7 @@ using System.Data; // ConnectionState kullanmak için ekledik
 
 namespace DataAccessLayer
 {
-    class DALPersonel
+    public class DALPersonel
     {
         //Listeleme işlemi için bir method tanımlayacagız
         public static List<EntityPersonel> PersonelListesi()
