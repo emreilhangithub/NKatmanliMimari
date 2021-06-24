@@ -66,5 +66,23 @@ namespace DataAccessLayer
             return komut3.ExecuteNonQuery() > 0; //şartları saglayan değer varsa true gönder yani 1 
         }
 
+        public static bool PersonelGuncelle(EntityPersonel p)
+        {
+            SqlCommand komut4 = new SqlCommand("UPDATE Tbl_Personel SET PerAd=@PerAd,PerSoyad=@PerSoyad,PerSehir=@PerSehir,PerMaas=@PerMaas,PerMeslek=@PerMeslek WHERE Perid=@Perid", Baglanti.bgl);
+
+            if (komut4.Connection.State != ConnectionState.Open)
+            {
+                komut4.Connection.Open();
+            }
+
+            komut4.Parameters.AddWithValue("@PerAd", p.Ad);
+            komut4.Parameters.AddWithValue("@PerSoyad", p.Soyad);
+            komut4.Parameters.AddWithValue("@PerSehir", p.Sehir);
+            komut4.Parameters.AddWithValue("@PerMaas", p.Maas);
+            komut4.Parameters.AddWithValue("@PerMeslek", p.Gorev);
+            komut4.Parameters.AddWithValue("@Perid", p.Id);
+           
+            return komut4.ExecuteNonQuery()>0;
+        }
     }
 }

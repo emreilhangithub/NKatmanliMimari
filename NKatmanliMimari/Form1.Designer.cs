@@ -45,6 +45,7 @@ namespace NKatmanliMimari
             this.label6 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,7 +178,7 @@ namespace NKatmanliMimari
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(731, 101);
+            this.btnSil.Location = new System.Drawing.Point(905, 5);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(139, 29);
             this.btnSil.TabIndex = 15;
@@ -185,11 +186,22 @@ namespace NKatmanliMimari
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(905, 54);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(139, 29);
+            this.btnGuncelle.TabIndex = 16;
+            this.btnGuncelle.Text = "GÜNCELLE";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 653);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtMaas);
@@ -232,6 +244,7 @@ namespace NKatmanliMimari
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }
 

@@ -45,5 +45,17 @@ namespace NKatmanliMimari
             ent.Id = short.Parse(txtId.Text);
             LogicPersonel.LLPersonelSil(ent.Id);
         }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            EntityPersonel ent = new EntityPersonel(); //nesne türekttik
+            ent.Id = short.Parse(txtId.Text);
+            ent.Ad = txtAd.Text;
+            ent.Soyad = txtSoyad.Text;
+            ent.Sehir = txtSehir.Text;
+            ent.Maas = short.Parse(txtMaas.Text);
+            ent.Gorev = txtGorev.Text;
+            LogicPersonel.LLPersonelGuncelle(ent);
+        }
     }
 }

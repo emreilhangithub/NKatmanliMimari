@@ -36,5 +36,17 @@ namespace LogicLayer
                 return false;
             }
         }
+
+        public static bool LLPersonelGuncelle(EntityPersonel ent)
+        {
+            if (ent.Ad.Length>=3 && ent.Ad!="" && ent.Maas>=4500)
+            {
+                return DALPersonel.PersonelGuncelle(ent);
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
