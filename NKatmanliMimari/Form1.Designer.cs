@@ -43,6 +43,7 @@ namespace NKatmanliMimari
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaas = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@ namespace NKatmanliMimari
             // 
             this.btnListele.Location = new System.Drawing.Point(731, 3);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(139, 48);
+            this.btnListele.Size = new System.Drawing.Size(139, 29);
             this.btnListele.TabIndex = 3;
             this.btnListele.Text = "LİSTELE";
             this.btnListele.UseVisualStyleBackColor = true;
@@ -163,11 +164,22 @@ namespace NKatmanliMimari
             this.label6.TabIndex = 12;
             this.label6.Text = "MAAŞ:";
             // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(731, 54);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(139, 29);
+            this.btnEkle.TabIndex = 14;
+            this.btnEkle.Text = "EKLE";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 653);
+            this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtMaas);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSehir);
@@ -206,6 +218,7 @@ namespace NKatmanliMimari
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMaas;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEkle;
     }
 }
 

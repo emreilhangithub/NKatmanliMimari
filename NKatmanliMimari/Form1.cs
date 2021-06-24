@@ -27,5 +27,16 @@ namespace NKatmanliMimari
             //oluşturulan değişkene değer ata LLPersonelListesi ata
             dataGridView1.DataSource = PerList;
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            EntityPersonel ent = new EntityPersonel(); //nesne türekttik
+            ent.Ad = txtAd.Text;
+            ent.Soyad = txtSoyad.Text;
+            ent.Sehir = txtSehir.Text;
+            ent.Maas = short.Parse(txtMaas.Text);
+            ent.Gorev = txtGorev.Text;
+            LogicPersonel.LLPersonelEkle(ent);
+        }
     }
 }
