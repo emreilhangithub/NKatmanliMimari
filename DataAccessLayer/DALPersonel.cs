@@ -15,7 +15,7 @@ namespace DataAccessLayer
         public static List<EntityPersonel> PersonelListesi()
         {
             List<EntityPersonel> degerler = new List<EntityPersonel>();
-            SqlCommand komut1 = new SqlCommand("select * from Tbl_Yonetici",Baglanti.bgl);
+            SqlCommand komut1 = new SqlCommand("select * from Tbl_Personel", Baglanti.bgl);
             //eninty personellerden değerler adında bir nesne türettik
             if (komut1.Connection.State != ConnectionState.Open) //bağlantı acık degilse
             {
@@ -31,7 +31,7 @@ namespace DataAccessLayer
                 ent.Soyad = dr["PerSoyad"].ToString();
                 ent.Gorev = dr["PerMeslek"].ToString();
                 ent.Sehir = dr["PerSehir"].ToString();
-                ent.Id = short.Parse(dr["PerMaas"].ToString());
+                ent.Maas = short.Parse(dr["PerMaas"].ToString());
                 degerler.Add(ent); //değerlerin içersine ekle ent den gelen değerleri
             }
 
