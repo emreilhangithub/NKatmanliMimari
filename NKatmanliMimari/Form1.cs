@@ -38,5 +38,12 @@ namespace NKatmanliMimari
             ent.Gorev = txtGorev.Text;
             LogicPersonel.LLPersonelEkle(ent);
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            EntityPersonel ent = new EntityPersonel();
+            ent.Id = short.Parse(txtId.Text);
+            LogicPersonel.LLPersonelSil(ent.Id);
+        }
     }
 }
