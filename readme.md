@@ -12,16 +12,22 @@ Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://g
 ### Anasayfa
 
 **1)Kullanıcı Arayüzü (UI Layer):**
+
 UI katmanı, Windows Forms uygulaması olan "MainFrm" formunu içerir.
+
 Bu form, kullanıcı arayüzü bileşenlerini (DataGridView, TextBox, vb.) barındırır.
+
 Kullanıcı arayüzünde "Listele", "Ekle", "Sil" ve "Güncelle" gibi butonlar bulunur ve bunlara tıklanması durumunda ilgili işlevler çalıştırılır.
 
 
 ![MainForm](https://github.com/emreilhangithub/NKatmanliMimari/blob/master/images/MainForm.png)
 
 **2)Mantık Katmanı (Logic Layer):**
+
 LogicLayer içinde, iş mantığını barındıran "LogicPersonel" sınıfı bulunur.
+
 Bu sınıf, UI katmanından gelen istekleri alır, gerektiğinde veritabanı işlemlerini çağırır ve sonuçları UI katmanına döndürür.
+
 "LLPersonelListesi", "LLPersonelEkle", "LLPersonelSil" ve "LLPersonelGuncelle" gibi metotlar, personel verileriyle ilgili işlemleri gerçekleştirir.
 
 
@@ -29,8 +35,11 @@ Bu sınıf, UI katmanından gelen istekleri alır, gerektiğinde veritabanı iş
 
 
 **3)Veri Erişim Katmanı (Data Access Layer):**
+
 DataAccessLayer içinde, veritabanı işlemlerinin yapıldığı "DALPersonel" sınıfı bulunur.
+
 Bu sınıf, veritabanı bağlantısı kurar ve gerekli SQL sorgularını çalıştırarak veritabanı işlemlerini gerçekleştirir.
+
 "PersonelListesi", "PersonelEkle", "PersonelSil" ve "PersonelGuncelle" gibi metotlar, veritabanı işlemlerini gerçekleştirir.
 
 
@@ -38,7 +47,9 @@ Bu sınıf, veritabanı bağlantısı kurar ve gerekli SQL sorgularını çalı�
 
 
 **4)Varlık Katmanı (Entity Layer):**
+
 EntityLayer içinde, veritabanındaki personel tablosunu temsil eden "EntityPersonel" sınıfı bulunur.
+
 Bu sınıf, personel verilerini tutan özelliklere (Id, Ad, Soyad, vb.) sahiptir.
 
 
