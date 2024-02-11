@@ -1,7 +1,7 @@
 ﻿
-namespace NKatmanliMimari
+namespace UIlayer
 {
-    partial class Form1
+    partial class MainFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,13 +52,13 @@ namespace NKatmanliMimari
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 149);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1101, 504);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -71,6 +71,7 @@ namespace NKatmanliMimari
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(139, 6);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(220, 26);
@@ -196,7 +197,7 @@ namespace NKatmanliMimari
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // Form1
+            // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,8 +219,8 @@ namespace NKatmanliMimari
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainFrm";
+            this.Text = "N Katmanlı Mimari Formu";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
