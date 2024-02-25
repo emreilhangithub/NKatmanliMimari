@@ -5,7 +5,7 @@
 *Bu projede, **.Net**  platformu kullanılarak üç katmanlı mimariye sahip bir personel yönetim uygulaması geliştirdim. Uygulamada CRUD operasyonları için ADO.NET kullandım. Mimari olarak **N-katmanlı** bir yapı tercih ettim.*
 
 # Database Yedeği #
-Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz. https://github.com/emreilhangithub/NKatmanliMimari/tree/master/database
+Database kısmına [buradan](https://github.com/emreilhangithub/NKatmanliMimari/tree/master/database) ulaşıp kendinize yükleyebilirsiniz. 
 
 # Proje İçeriği #
 
